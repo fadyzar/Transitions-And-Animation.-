@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar animation</title>
+    <style>
+        .container{
+            display: flex;
+        }
+        body{
+            background-color:black;
+        }
+    .loader{
+        width: 100px;
+        height: 100px;
+        border: 5px solid gray;
+        border-radius: 50%;
+        border-top:5px solid goldenrod;
+        animation: rotate-loader 2s linear infinite;
+    }
+
+    @keyframes rotate-loader{
+        0%{
+            transform: rotate(0);
+        }
+
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+
+    .loader-second{
+        width: 100px;
+        height: 100px;
+        border: 0px solid gray;
+        border-radius: 50%;
+        border-top:5px solid goldenrod;
+        animation: rotate-loader 2s linear infinite;
+        margin-left: 200px;;
+    }
+
+    .loader-third { 
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 32px 0 #fff, -32px 0 #fff;
+  position: relative;
+  animation: flash 0.5s ease-out infinite alternate;
+  margin-left: 250px;
+}
+
+.loader-four, .loader-four:before, .loader-four:after {
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  animation-fill-mode: both;
+  animation: bblFadInOut 1.8s infinite ease-in-out;
+ 
+}
+.loader-four {
+  color: #FFF;
+  font-size: 7px;
+  position: relative;
+  text-indent: -9999em;
+  transform: translateZ(0);
+  animation-delay: -0.16s;
+  margin-left: 300px;
+}
+.loader-four:before,
+.loader-four:after {
+  content: '';
+  position: absolute;
+  top: 0;
+}
+.loader-four:before {
+  left: -3.5em;
+  animation-delay: -0.32s;
+}
+.loader-four:after {
+  left: 3.5em;
+}
+
+@keyframes bblFadInOut {
+  0%, 80%, 100% { box-shadow: 0 2.5em 0 -1.3em }
+  40% { box-shadow: 0 2.5em 0 0 }
+}
+    
+
+@keyframes flash {
+  0% {
+    background-color: #FFF2;
+    box-shadow: 32px 0 #FFF2, -32px 0 #FFF;
+  }
+  50% {
+    background-color: #FFF;
+    box-shadow: 32px 0 #FFF2, -32px 0 #FFF2;
+  }
+  100% {
+    background-color: #FFF2;
+    box-shadow: 32px 0 #FFF, -32px 0 #FFF2;
+  }
+}
+      
+    
+    
+ 
+      
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="loader"></div>
+    <div class="loader-second"></div>
+   <div class="loader-third"></div>
+   <div class="loader-four"></div>
+</div>
+</body>
+</html>

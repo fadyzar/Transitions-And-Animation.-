@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14.2_transitions</title>
+
+    <style>
+
+    .container{
+        display: flex;
+        justify-content: space-between;
+        background-color: aqua;
+        
+        color: red;
+        
+    }
+     .container div{
+       position: relative;
+       background-color: beige;
+       overflow: hidden;
+     }
+
+     .rotate::after{
+        content:'' ;
+        background-color: black;
+        position: absolute;
+       
+        overflow: hidden;
+       
+     }
+      
+     .rotate:hover{
+        transform: rotate(0.5turn);
+        background-color: yellow;
+       
+     }
+     .rotate:hover::after{
+        transform: rotate(0.5turn);
+        transition:  2s;
+        background-color: red;
+       
+    
+    
+    }
+     .scale::after{
+        content:'' ;
+        background-color: black;
+        position: absolute;
+       
+        overflow: hidden;
+       
+     }
+      
+     .scale:hover{
+        transform: scale(2, 0.5);
+        background-color: black;
+        overflow: hidden;
+     }
+     .skew::after{
+        content:'' ;
+        background-color: black;
+        position: absolute;
+       
+        overflow: hidden;
+       
+     }
+      
+     .skew:hover{
+        transform: skew(30deg, 20deg);
+        background-color: pink;
+        overflow: hidden;
+     }
+
+     
+
+     .translate-y::after{
+        content:'cool' ;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+       text-justify: distribute;
+      
+        position: absolute;
+       margin-top: -124px;
+        overflow: hidden;
+        width: 87px;
+        height: 66px;
+       
+     }
+      
+     .translate-y:hover{
+        
+        background-color: red;
+        overflow: hidden;
+     }
+     .translate-y:hover::after{
+        transform: translateY(62px);
+        transition:  2s;
+        background-color: beige;
+        overflow: hidden;
+     }
+   
+     .translate-x::after{
+        content:'cool' ;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+       justify-content: center;
+        
+        position: absolute;
+       margin-left: -85px;
+     
+        width: 120px;
+        height: 60px;
+        margin-top: -60px;
+        overflow: hidden;
+       
+     }
+      
+     .translate-x:hover{
+        
+        background-color: red;
+        overflow: hidden;
+     }
+     .translate-x:hover::after{
+        transform: translateX(62px);
+        transition:  2s;
+        background-color: beige;
+        overflow: hidden;
+     }
+   
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="rotate"> <h3>rotate</h3></div>
+    <div class="scale"> <h3>scale</h3></div>
+    <div class="skew"> <h3>skew</h3></div>
+    <div class="translate-y"><h3>translate-y</h3> </div>
+    <div class="translate-x"><h3>translate-x</h3> </div>
+
+</div>
+</body>
+</html>
